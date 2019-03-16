@@ -1,6 +1,6 @@
-using NUnit.Framework;
-using FluentAssertions;
 using System;
+using FluentAssertions;
+using NUnit.Framework;
 using static CategoryTheory.Functions;
 
 namespace CategoryTheory.Chapter1
@@ -40,6 +40,11 @@ namespace CategoryTheory.Chapter1
 
             int result = addOneWithIdFunction(10);
             result.Should().Be(11);
+
+            Func<int, int> idWithAddOne = ((Func<int, int>) Id).ComposeWith(addOne);
+
+            result = idWithAddOne(515);
+            result.Should().Be(516);
         }
     }
 }
