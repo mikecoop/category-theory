@@ -8,7 +8,7 @@ namespace CategoryTheory.Chapter1
     public class Tests
     {
         [Test]
-        public void ComposeWith_GivenTwoFucntionsSameTypes_FunctionsAreCompsed()
+        public void ComposeWith_GivenTwoFunctionsSameTypes_FunctionsAreComposed()
         {
             Func<int, int> addOne = n => n + 1;
             Func<int, int> timesTwo = n => n * 2;
@@ -20,7 +20,7 @@ namespace CategoryTheory.Chapter1
         }
 
         [Test]
-        public void ComposeWith_GivenTwoFucntionsDifferentTypes_FunctionsAreCompsed()
+        public void ComposeWith_GivenTwoFunctionsDifferentTypes_FunctionsAreComposed()
         {
             Func<int, int> addOne = n => n + 1;
             Func<int, string> toString = n => n.ToString();
